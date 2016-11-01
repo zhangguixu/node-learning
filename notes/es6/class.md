@@ -217,7 +217,7 @@ var p = new Person("zhang");
 
 执行结果为
 
-![setter-getter-2.png](../../images/setter-getter-2.png)
+![setter-getter-3.png](../../images/setter-getter-3.png)
 
 *当没有getter和setter时，就可以正常读写属性*
 
