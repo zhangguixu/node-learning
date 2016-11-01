@@ -198,8 +198,66 @@ console.log(p._name); // "zhang"
 
 ### 5.2 只有getter定义只读属性
 
+当一个属性只有getter没有setter的时候，我们是无法进行赋值操作的（第一次初始化也不行），这一点也是相当地`坑`。例如
 
+```javascript
+class Person {
+    constructor (name) {
+        this.name = name;
+    }
+    // 只有getter
+    get name () {
+        console.log("getter");
+        return this.name;
+    }
+}
+
+var p = new Person("zhang");
+```
+
+执行结果为
+
+![setter-getter-2.png](../../images/setter-getter-2.png)
+
+*当没有getter和setter时，就可以正常读写属性*
 
 ## 6. 私有属性
+
+在上面的例子其实已经可以看到，即使有setter/getter的情况下，还是无法对属性进行封装，我们还是可以通过对象直接访问到该属性`p._name`，那么如何来实现私有的属性？
+
+### 6.1 构造函数 + 闭包
+
+```javascript
+class Person {
+    constructor (name) {
+        Object.assign(this, {
+            getName() {
+                console.log("getter")
+                return name;
+            },
+            setName (othername) {
+                console.log("setter")
+                name = othername;
+            }
+        });
+    }
+
+    sayName () {
+        console.log(this.getName());
+    }
+}
+
+var p = new Person("zhang");
+p.sayName(); // zhang
+console.log(p.name); // undefined
+```
+
+### 6.2 WeakMap
+
+[WeakMap详解](./weakmap.md)
+
+### 6.3 Symbol + 闭包
+
+[Symbol详解](./symbol.md)
 
 ## 7. [完整示例](../../src/class-example.js)
