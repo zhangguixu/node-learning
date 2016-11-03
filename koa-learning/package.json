@@ -1,0 +1,47 @@
+{
+  "name": "koa-learning",
+  "version": "1.0.0",
+  "description": "koa learning examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangguixu/node-learning.git"
+  },
+  "dependencies": {
+    "co": "^4.1.0",
+    "co-body": "^1.0.0",
+    "co-busboy": "^1.0.2",
+    "co-fs": "^1.2.0",
+    "co-views": "^2.1.0",
+    "ejs": "^1.0.0",
+    "koa": "^1.0.0",
+    "koa-basic-auth": "^1.1.1",
+    "koa-compose": "^2.3.0",
+    "koa-csrf": "^2.1.1",
+    "koa-logger": "^1.2.1",
+    "koa-route": "^1.1.4",
+    "koa-session": "^3.1.0",
+    "koa-static": "^2.0.0",
+    "raw-body": "^1.2.1",
+    "save-to": "^1.0.3",
+    "streaming-json-stringify": "^1.0.0",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "co": "*",
+    "eslint": "^3.8.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.1.2",
+    "should": "^3.3.2",
+    "supertest": "*"
+  },
+  "author": "zhangguixu",
+  "license": "MIT"
+}

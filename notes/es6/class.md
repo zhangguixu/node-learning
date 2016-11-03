@@ -260,4 +260,4 @@ console.log(p.name); // undefined
 
 [Symbol详解](./symbol.md)
 
-## 7. [完整示例](../../src/class-example.js)
+## 7. [完整示例](../../es6/class-example.js)
