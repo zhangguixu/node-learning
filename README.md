@@ -36,6 +36,20 @@
 2. chai
 3. [supertest](./notes/test/supertest.md)
 
+
+测试命令
+
+```shell
+# 测试全部
+npm test
+
+# 测试全部
+gulp testall
+
+# 单个测试，带参数catalog指定目录，如果没有指定，默认测试全部
+gulp test --catalog hello-world
+```
+
 ## 6. 构建工具
 
 本项目中的koa-learning目前基本都是参考[koa-examples](https://github.com/koajs/examples)，因为该项目使用的makefile来进行项目的构建，考虑到能够在window下实现自动化测试，同时作为学习，决定使用gulp。
