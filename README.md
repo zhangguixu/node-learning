@@ -24,11 +24,34 @@
     1. 异步IO底层概述
     2. Node的异步IO
 
-## 3. API学习
+3. 异步编程解决
+4. 内存控制
+6. Buffer
+7. Node多进程
+8. 网络编程(TCP、UDP、HTTP、Websocket)
+
+## 3. 系统学习
+
+### 3.1 API学习
+
+### 3.2 web开发
+
+1. [中间件](./notes/web/middleware.md)
+2. [模版](./notes/web/template.md)
+3. [路由](./notes/web/route.md)
+4. [cookie/session](./notes/web/cache.md)
+5. [持久化](./notes/web/store.md)
 
 ## 4. 框架学习
 
 ### 4.1 koa
+
+1. [安装与入门](./notes/koa/start.md)
+
+### 4.2 vue
+
+1. [服务器端渲染](./notes/vue/ssr.md)
+2. [vue-loader](./notes/vue/vue-loader.md)
 
 ## 5. 测试框架
 
@@ -62,6 +85,20 @@ npm install -g --save-dev gulp
 
 1. [gulp入门](./notes/tools/gulp.md)
 2. [gulp-mocha](./notes/tools/gulp-mocha.md)
+3. [webpack](./notes/tools/webpack.md)
+
+## 7. 更多话题
+
+* 代码托管
+* 持续集成
+* 自动化测试
+* 日志统计
+* 性能监控
+* 负载均衡
+* 微服务化
+* 运维部署
+* 容灾备份
+* 云主机/数据库
 
 ## 资料来源
 
