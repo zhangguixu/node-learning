@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ data.title }}</title>
+</head>
+<body>
+    <h1>{{ data.msg }}</h1>
+<ul>
+{% for author in data.authors %}
+    <li{% if loop.first %} class="first"{% endif %}>{{ author }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>

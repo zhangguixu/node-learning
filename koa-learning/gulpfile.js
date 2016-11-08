@@ -3,9 +3,7 @@ const mocha = require("gulp-mocha");
 
 const catalog = gulp.env.catalog;
 const testFile = "./" + (catalog || "*") + "/test.js";
-
-// webpack
-const webpackConfig = require("./vue-webpack/webpack.config");
+console.log(testFile);
 
 gulp.task("test", () => {
     gulp.src(testFile, {read:false})
@@ -29,7 +27,4 @@ gulp.task("testall", () => {
             process.exit(); 
         });
 });
-
-// 配置webpack打包处理
-// tbd
 

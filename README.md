@@ -34,6 +34,10 @@
 
 ### 3.1 API学习
 
+1. [global Object](./notes/node/global-object.md)
+
+    * __dirname
+
 ### 3.2 web开发
 
 1. [中间件](./notes/web/middleware.md)
@@ -47,6 +51,7 @@
 ### 4.1 koa
 
 1. [安装与入门](./notes/koa/start.md)
+2. [template](./notes/koa/template.md)
 
 ### 4.2 vue
 
@@ -58,7 +63,7 @@
 1. mocha 
 2. chai
 3. [supertest](./notes/test/supertest.md)
-
+4. [should/should-http](./notes/test/should-http.md)
 
 测试命令
 
