@@ -14,14 +14,6 @@ const data = {
     authors: ['Paul', 'Jim', 'Jane']
 };
 
-// 输出字符串内容
-// app.use(function *() {
-//     var p = render("example", {data : data});
-//     p.then((html) => {
-//         console.log(html);
-//     });
-// });
-
 app.use(function *() {
     this.body = yield render("example", {data : data});
 });

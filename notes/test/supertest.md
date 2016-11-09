@@ -33,6 +33,16 @@ describe("get /user", function () {
 
 注意，代码中的`expect`方法是supertest中自带的API方法，而describe和it则是mocha框架带来的。
 
+
+**使用post请求**
+
+```javascript
+request(app)
+    .post('/')
+    .field('name', 'my awesome avatar') // 参数
+    .attach('avatar', 'test/fixtures/homeboy.jpg') // 文件
+```
+
 ## 4. 更多
 
 [superTest github地址](https://github.com/visionmedia/supertest)

@@ -9,6 +9,9 @@
 *实际上就是加入使用的es6的新特性*
 
 1. [class](./notes/es6/class.md)
+2. [generator](./notes/es6/generator.md)
+3. [Promise](./notes/es6/promise.md)
+4. [async/await](./notes/es6/async-await.md)
 
 ## 2. 原理学习
 
@@ -50,8 +53,11 @@
 
 ### 4.1 koa
 
+*koa2.0*
+
 1. [安装与入门](./notes/koa/start.md)
-2. [template](./notes/koa/template.md)
+2. [模版](./notes/koa/template.md)
+3. [路由](./notes/koa/route.md)
 
 ### 4.2 vue
 

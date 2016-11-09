@@ -25,3 +25,7 @@ npm install -g koa-generator
 ```shell
 koa2 helloWorld
 ```
+
+## 示例
+
+![完整示例](../../koa-learning/hello-world)

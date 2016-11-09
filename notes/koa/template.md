@@ -74,4 +74,4 @@ var output = template({
 
 ## 3. 完整示例
 
-[template](../../template)
+[template](../../koa-learning/template)
