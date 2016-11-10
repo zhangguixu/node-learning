@@ -43,6 +43,20 @@ request(app)
     .attach('avatar', 'test/fixtures/homeboy.jpg') // 文件
 ```
 
+**cookie**
+
+```javascript
+// 从http头获取cookie
+request
+    .get("/")
+    .expect("set-cookie", new RegExp("key=value"));
+```
+
+*支持正则表达式的match*
+
+supertest在多次使用request会保存cookie信息。[见详细示例](../../koa-learning/cookie)
+
+
 ## 4. 更多
 
 [superTest github地址](https://github.com/visionmedia/supertest)

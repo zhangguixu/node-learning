@@ -59,6 +59,7 @@
 2. [模版](./notes/koa/template.md)
 3. [路由](./notes/koa/route.md)
 4. [请求参数解析](./notes/koa/body-parse.md)
+5. [cookie](./notes/koa/cookie.md)
 
 ### 4.2 vue
 
@@ -75,13 +76,7 @@
 测试命令
 
 ```shell
-# 测试全部
-npm test
-
-# 测试全部
-gulp testall
-
-# 单个测试，带参数catalog指定目录，如果没有指定，默认测试全部
+# 测试，带参数catalog指定目录
 gulp test --catalog hello-world
 ```
 

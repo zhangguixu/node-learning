@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\zhangguixu\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'test',
+1 verbose cli   'hello-world' ]
+2 info using npm@1.4.26
+3 info using node@v6.9.1
+4 error Error: ENOENT: no such file or directory, open 'c:\Users\zhangguixu\Desktop\node-learning\koa-learning\node_modules\hello-world\package.json'
+4 error     at Error (native)
+5 error If you need help, you may report this *entire* log,
+5 error including the npm and node versions, at:
+5 error     <http://github.com/npm/npm/issues>
+6 error System Windows_NT 6.3.9600
+7 error command "D:\\nodejs\\node.exe" "C:\\Users\\zhangguixu\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "test" "hello-world"
+8 error cwd c:\Users\zhangguixu\Desktop\node-learning\koa-learning
+9 error node -v v6.9.1
+10 error npm -v 1.4.26
+11 error path c:\Users\zhangguixu\Desktop\node-learning\koa-learning\node_modules\hello-world\package.json
+12 error syscall open
+13 error code ENOENT
+14 error errno -4058
+15 verbose exit [ -4058, true ]
