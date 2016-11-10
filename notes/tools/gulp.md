@@ -49,6 +49,10 @@ gulp default --file test.js --test
 
 *在控制台的输出也可以看到，如今推荐的做法是安装yargs或minimist来获取命令参数，由于目前暂时够用了，就不纠结了。*
 
+-------------------------分割线--------------------------------
+
+决定使用[yargs](yargs.md)来获取环境参数，消除每次执行的警告。
+
 ## 资料
 
 1. [中文官网](http://www.gulpjs.com.cn/docs/getting-started/)

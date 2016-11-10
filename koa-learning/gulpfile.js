@@ -1,13 +1,13 @@
 const gulp = require("gulp");
 const mocha = require("gulp-mocha");
+const argv = require("yargs").argv;
+const merge = require("merge-stream");
 
-const catalog = gulp.env.catalog;
-const testFile = "./" + (catalog || "*") + "/test.js";
-console.log(testFile);
+var testFile = "./" + argv.c + "/test.js";;
 
-gulp.task("test", () => {
+gulp.task("one", () => {
     gulp.src(testFile, {read:false})
-        .pipe(mocha({reporter: "nyan"}))
+        .pipe(mocha({reporter: "list"}))
         .once("error", () => {
             process.exit(1);
         })
@@ -16,15 +16,27 @@ gulp.task("test", () => {
         });
 });
 
-// 全部测试，目前有问题，暂时舍弃
-// gulp.task("testall", () => {
-//     gulp.src("./*/test.js", {read:false})
-//         .pipe(mocha({reporter: "nyan"}))
-//         .once("error", () => {
-//             process.exit(1);
-//         })
-//         .once("end", () => {
-//             process.exit(); 
-//         });
-// });
+gulp.task("default", ["one"]);
 
+// const examples = [
+//     "hello-world",
+//     "template",
+//     "route",
+//     "body-parse",
+//     "cookie"
+// ];
+
+// function getTestFileArr (){
+//     return examples.map( (v) => {
+//         return ("./" + v + "/test.js");
+//     });
+// }
+
+// gulp.task("all", () => {
+//     var tasks = getTestFileArr().map((v) => {
+//         return gulp.src(v, {read : false})
+//             .pipe(mocha({reporter: "nyan"}));
+//     });
+
+//     merge(tasks);
+// });

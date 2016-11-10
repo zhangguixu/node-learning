@@ -73,13 +73,6 @@
 3. [supertest](./notes/test/supertest.md)
 4. [should/should-http](./notes/test/should-http.md)
 
-测试命令
-
-```shell
-# 测试，带参数catalog指定目录
-gulp test --catalog hello-world
-```
-
 ## 6. 构建工具
 
 本项目中的koa-learning目前基本都是参考[koa-examples](https://github.com/koajs/examples)，因为该项目使用的makefile来进行项目的构建，考虑到能够在window下实现自动化测试，同时作为学习，决定使用gulp。
@@ -93,6 +86,7 @@ npm install -g --save-dev gulp
 1. [gulp入门](./notes/tools/gulp.md)
 2. [gulp-mocha](./notes/tools/gulp-mocha.md)
 3. [webpack](./notes/tools/webpack.md)
+4. [yargs](./notes/tools/yargs.md)
 
 ## 7. 更多话题
 

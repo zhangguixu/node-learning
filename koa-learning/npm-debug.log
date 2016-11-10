@@ -2,6 +2,7 @@
 1 verbose cli [ 'D:\\nodejs\\node.exe',
 1 verbose cli   'C:\\Users\\zhangguixu\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'test',
+1 verbose cli   '-c',
 1 verbose cli   'hello-world' ]
 2 info using npm@1.4.26
 3 info using node@v6.9.1
@@ -11,7 +12,7 @@
 5 error including the npm and node versions, at:
 5 error     <http://github.com/npm/npm/issues>
 6 error System Windows_NT 6.3.9600
-7 error command "D:\\nodejs\\node.exe" "C:\\Users\\zhangguixu\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "test" "hello-world"
+7 error command "D:\\nodejs\\node.exe" "C:\\Users\\zhangguixu\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "test" "-c" "hello-world"
 8 error cwd c:\Users\zhangguixu\Desktop\node-learning\koa-learning
 9 error node -v v6.9.1
 10 error npm -v 1.4.26
