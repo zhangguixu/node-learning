@@ -1,7 +1,7 @@
 const app = require("./app");
 const request = require("supertest").agent(app.listen())
 
-describe("Hello World", () => {  
+describe("hello-world Example", () => {  
 
     it("should return Hello World", function (done) {
         request // 已经获取到了发送请求的地址

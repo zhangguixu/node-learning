@@ -61,6 +61,7 @@
 3. [路由](./notes/koa/route.md)
 4. [请求参数解析](./notes/koa/body-parse.md)
 5. [cookie](./notes/koa/cookie.md)
+6. [执行流程](./notes/koa/negotiation.md)
 
 ### 4.2 vue
 

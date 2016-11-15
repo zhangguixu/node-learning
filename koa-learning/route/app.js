@@ -32,4 +32,4 @@ function * renderC () {
     this.body = yield render("c", { msg : data.c });
 }
 
-app.listen(3000);
+if(!module.parent) app.listen(3000);

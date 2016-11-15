@@ -16,27 +16,12 @@ gulp.task("one", () => {
         });
 });
 
+gulp.task("all", () => {
+    gulp.src("./*/test.js", {read : false})
+            .pipe(mocha({reporter: "list"}))
+            .once("end", () => {
+                process.exit();
+            })
+});
+
 gulp.task("default", ["one"]);
-
-// const examples = [
-//     "hello-world",
-//     "template",
-//     "route",
-//     "body-parse",
-//     "cookie"
-// ];
-
-// function getTestFileArr (){
-//     return examples.map( (v) => {
-//         return ("./" + v + "/test.js");
-//     });
-// }
-
-// gulp.task("all", () => {
-//     var tasks = getTestFileArr().map((v) => {
-//         return gulp.src(v, {read : false})
-//             .pipe(mocha({reporter: "nyan"}));
-//     });
-
-//     merge(tasks);
-// });

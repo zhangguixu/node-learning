@@ -7,4 +7,4 @@ app.use(function *(){
     this.body = { name : body.name.toUpperCase()};
 });
 
-app.listen(3000);
+if(!module.parent) app.listen(3000);

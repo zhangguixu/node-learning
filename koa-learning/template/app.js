@@ -18,4 +18,4 @@ app.use(function *() {
     this.body = yield render("example", {data : data});
 });
 
-app.listen(3000);
+if(!module.parent) app.listen(3000);
