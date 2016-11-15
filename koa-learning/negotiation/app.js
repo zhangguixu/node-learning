@@ -43,11 +43,11 @@ app.use(function *(next) {
             // json格式，koa会自动处理
             return ;
         }
-        case 'default' : {
-            this.type = 'text';
-            this.body = this.body.name;
-        }
+        case 'default' : break; 
+        // 不能在这里处理text的情况，貌似在koa的body中还会有其他的处理，导致返回的结果为json
     }
+    this.type = 'text';
+    this.body = this.body.name;    
 });
 
 // 去除数据私有属性
