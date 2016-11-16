@@ -106,3 +106,7 @@ for(let name of say()){
     console.log(name);
 }
 ```
+
+## 扩展阅读
+
+要从更加底层的角度来理解generator可以阅读[什么是协程](../aio/coroutine.md)
