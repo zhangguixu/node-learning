@@ -1,13 +1,5 @@
 # koa-0.0.2
 
-前置知识
-
-1. [Promise](../es6/promise.md)
-2. [Thunk](../es6/thunk.md)
-3. [generator](../es6/generator.md)
-4. [co](co.md)
-5. [compose](compose.md)
-
 ## 1. 概述
 
 作为学习koa框架源码的起点，这个release版本的代码相对简单，下载源码之后，目录结构为：
