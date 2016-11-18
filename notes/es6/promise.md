@@ -450,6 +450,14 @@ Promise.prototype.finally = function (callback) {
 
 ## 5. Promise的优劣势
 
+从上面几个小节综合来看，可以看到Promise其实就是做了一件事情，那就是对异步操作进行了封装，然后可以将异步操作以同步的流程表达出来，避免了层层嵌套的回调函数，同时提供统一的接口，使得控制异步操作更加容易。
+
+但是，Promise也有一些缺点：
+
+* 无法取消Promise，一旦新建它就会立即执行，无法中途取消。
+* 如果不设置回调函数，Promise内部的错误不会反应到外部。
+* 当处于未完成态时，无法得知目前进展到哪一个阶段。
+
 ## 6. Promise与generator的结合
 
 [generator简介](./generator.md)
@@ -458,40 +466,38 @@ Promise.prototype.finally = function (callback) {
 
 ```javascript
 function getFoo() {
-    return new Promise( resolve => resolve('foo'));
+	return new Promise( resolve => resolve('foo'));
 }
 
-var g = function *() {
-    try {
-        var foo = yield getFoo();
-        console.log(foo);
-    } catch(e) {
-        console.log(e);
-    }
-};
+var g = function * () {
+	try {
+		var foo = yield getFoo();
+		console.log(foo);
+	} catch(e){}
+}
 
 function run(generator) {
-    var it = generator();
-    
-    function go(result) {
-        if(result.done) return result.value;
+	var it = generator();
 
-        return result.value.then( value => {
-            return go(it.next(value));
-        }, err => {
-            return go(it.throw(err));
-        });
-    }
+	function go(result) {
+		if(result.done) return result.value;
 
-    go(it.next());
+		// 默认value是一个Promise，其实这里应该做判断的
+		if(!(result.value instanceof Promise)){
+			throw Error('yield must follow an instanceof Promise');
+		}
+		return result.value.then(
+			ret => go(it.next(ret))
+		).catch(err => go(it.throw(err)));
+	}
+
+	go(it.next());
 }
 
 run(g);
 ```
 
 上面代码的Generator函数g之中，有一个异步操作getFoo，它返回的就是一个Promise对象。函数run用来处理这个Promise对象，并调用下一个next方法。
-
-
 
 ## 来源
 
