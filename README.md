@@ -34,6 +34,8 @@
 7. Node多进程
 8. 网络编程(TCP、UDP、HTTP、Websocket)
 
+    * [querystring](./notes/http/query-string.md)
+
 ## 3. 系统学习
 
 ### 3.1 API学习

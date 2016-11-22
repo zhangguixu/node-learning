@@ -242,11 +242,42 @@ app.onerror = function (err) {
 
 **app.context**
 
+从代码上看，这个原型函数将一个传入的对象属性到Context对象的原型对象上：
 
+```javascript
+app.context = function (obj) {
+    var ctx = this.Context.prototype;
+    var names = Object.getOwnPropertyNames(obj);
+
+    names.forEach(function (name) {
+        var descriptor = Object.getOwnPropetyDescriptor(obj, name);
+        Object.defineProperty(ctx, name, descriptor);
+    });
+
+    return this;
+}
+```
+
+在Application构造函数的定义中，可以看到，它将context.js中定义的对象context中的方法都合并到了Context的原型对象上。
+
+```javascript
+var context = require('./context');
+function Application () {
+    this.context(context);
+}
+```
+
+下面就来看看context.js中的对象定义了哪些方法。
 
 ## 3. context.js
 
-目前为止，就只有context
+这个文件的代码学习主要知识点都是node中关于网络（http）编程。
+
+我们首先来看文件中的模块依赖：
+
+* Negotiator: [模板的文档地址](https://github.com/jshttp/negotiator),这个主要是处理
+* querystring: 处理请求的url，进行解析，可以获取请求路径，参数等等。
+
 
 ## 学习总结
 
