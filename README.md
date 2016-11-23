@@ -35,6 +35,7 @@
 8. 网络编程(TCP、UDP、HTTP、Websocket)
 
     * [querystring](./notes/http/query-string.md)
+    * [mime](./notes/http/mime.md)
 
 ## 3. 系统学习
 
