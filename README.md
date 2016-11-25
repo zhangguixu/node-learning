@@ -27,6 +27,7 @@
     1. 异步IO底层概述
     2. Node的异步IO
     3. [协程](./notes/aio/coroutine.md)
+    4. [EventEmitter](./notes/aio/event-emitter.md)
 
 3. 异步编程解决
 4. 内存控制
@@ -36,6 +37,7 @@
 
     * [querystring](./notes/http/query-string.md)
     * [mime](./notes/http/mime.md)
+    * [http](./notes/http/http.md)
 
 ## 3. 系统学习
 
